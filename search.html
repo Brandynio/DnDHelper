@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <select id="searchType" name="searchType">
+            <option value="classes">Classes</option>
+            <option value="features">Features</option>
+            <option value="monsters">Monsters</option>
+            <option value="spells">Spells</option>
+        </select>
+        <input id="searchBar" type='text' name="searchTerm">
+        <input type="button" onclick="search()" value="Search">
+    </form>
+    <h2 id="name"></h2>
+    <h4 id="error"></h4>
+    <div id="displayData">
+        
+    </div>
+    <script src="search.js"></script>
+</body>
+</html>
