@@ -208,17 +208,27 @@ function chooseSpell(url) {
             htmlData += "<p>Level " + data.level + " <em>" + data.school.name + "</em></p>" +
             //range
             "<p><strong>Range:</strong> " + data.range + "</p>" +
-            "<p><strong>Duration:</strong> " + data.duration + "</p>";
-
-                //duration
-                //components (loop)
+            //duration
+            "<p><strong>Duration:</strong> " + data.duration + "</p>" +
+            "<p><strong>Components:</strong> ";
+            //components (loop)
+            for (let i = 0; i < data.components.length; i++) {
+                htmlData += data.components[i];
+                if (i < data.components.length - 1) {
+                    htmlData += ", ";
+                }
+            }
+            htmlData += "</p>"
+            if (data.material != undefined) {
                 
-                //material
+            }
+                
+                //material (optional)
                 //concentration
                 //ritual
                 //classes (loop)
                 
-                //desc
+                //desc (loop)
                 //higher_level (optional)
             display.innerHTML = htmlData;
         })
