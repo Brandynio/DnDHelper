@@ -29,7 +29,6 @@ function rollDice() {
 
       total = total + randNum;
 
-
       i++;
     }
     if (dieSide > 1 && dieSide < 101) {
@@ -41,7 +40,7 @@ function rollDice() {
 
       randNum = Math.floor(Math.random() * dieSide) + 1;
 
-      rollArray[i] = randNum
+      rollArray[i] = randNum;
 
       i++;
     }
@@ -50,7 +49,19 @@ function rollDice() {
     }
   }
   else{
-    error.innerHTML = "You can only check one of the checkboxes at a time."
+    while (i < diceNum.value) {
+
+      randNum = Math.floor(Math.random() * dieSide) + 1;
+
+      rollArray[i] = randNum;
+
+      total = total + randNum;
+
+      i++;
+    }
+    if (dieSide > 1 && dieSide < 101) {
+      alert("Here are your rolls: " + rollArray + ". You have rolled a total of " + total + "!");
+    }
   }
 
 }
