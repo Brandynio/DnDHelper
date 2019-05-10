@@ -10,7 +10,7 @@ function AssingData(){
     var StatWis = document.forms['CharacterForm']['StatWis'].value;
     var StatCar = document.forms['CharacterForm']['StatCar'].value;
     var Character = document.createElement('div');
-    Character.setAttribute('Class','row CharElement');
+    Character.setAttribute('Class','CharElement');
     var CTextBlock = document.createElement('p');
     var CText = document.createTextNode(crctName+" The "+crctRace+", a level "+crctLevel+ " "+crctClass);
     CTextBlock.appendChild(CText);
