@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-#error{
-    color: red;
-}
-=======
 .Content{
     text-align: center;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     display: flex;
     width: 100%;
@@ -19,6 +14,15 @@
     min-width: 100%;
     max-width: 100%;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Content .col{
+    display: flex;
+    flex: 1;
+    min-width: 100%;
+    max-width: 100%;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
@@ -41,4 +45,3 @@ h2{
     margin: 5% 47%;
     width: 100px;
 }
->>>>>>> master
