@@ -1,21 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DnD Helper</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
 </head>
+
 <body>
-    
-    <h1>Character Stats</h1>
 
-
-    <div class="statBox">
-        <h2>24</h2>
+  <div id="Form" class="content">
+    <form name="CharacterForm" action="GamePage.html" onsubmit="return AssingData()" method="POST">
+      <div class="Content">
+        <section class="row">
+          <h2>
+            Character traits
+          </h2>
+        </section>
+        <section class="row">
+          <section>
+            Character Name:<br>
+            <input type="text" name="CharacterN">
+          </section>
+          <section>
+            Character Class:<br>
+            <input type="text" name="CharacterCl">
+          </section>
+          <section>
+            Character Level:<br>
+            <input type="text" name="CharacterLvl">
+          </section>
+          <section>
+            Character Race:<br>
+            <input type="text" name="CharacterRc">
+          </section>
+        </section>
+        <section class="row">
+          <h2>
+            Character Stats
+          </h2>
+        </section>
+        <section class="row">
+          <section>
+            Strength:<br>
+            <input type="number" name="StatStr">
+          </section>
+          <section>
+            Dexterity:<br>
+            <input type="number" name="StatDex">
+          </section>
+          <section>
+            Constitution:<br>
+            <input type="number" name="StatCon">
+          </section>
+          <section>
+            Intelligence:<br>
+            <input type="number" name="StatInt">
+          </section>
+          <section>
+            Wisdom:<br>
+            <input type="number" name="StatWis">
+          </section>
+          <section>
+            Charisma:<br>
+            <input type="number" name="StatC">
+          </section>
+        </section>
+        <section class="row">
+          <input id="subBut" type="submit">
+        </section>
+      </div>
+    </form>
+    <h3 id="ErrorMessage"></h3>
+  </div>
+  <section class="row">
+    <div id="Characters">
+      
     </div>
-
+  </section>
 
 </body>
+
 </html>
