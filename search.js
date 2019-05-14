@@ -204,7 +204,50 @@ function monsterChoose(url) {
     fetch(url)
         .then(response => response.json())
         .then(monster =>{
+            let dataFields
+            test.innerHTML = monster.name;
+            htmlData += "<p><em>" + monster.size + " " + monster.type;
+            if (monster.subtype != "") {
+                htmlData += " (" + monster.subtype + ")";
+            }
+            htmlData += ", " + monster.alignment + "</em></p>" +
+            "<p><b>Armor Class</b> " + monster.armor_class + "</p>" + 
+            "<p><b>Hit Points</b> " + monster.hit_points + " (" + monster.hit_dice + ")</p>" +
+            "<p><b>Speed</b> " + monster.speed + "</p>" + 
+            "<table><thead><tr><th>STR</th><th>DEX</th><th>CON</th><th>INT</th><th>WIS</th><th>CHA</th></tr></thead><tbody><tr>" +
+"<td>"+monster.strength+"</td><td>"+monster.dexterity+"</td><td>"+monster.constitution+"</td><td>"+monster.intelligence+"</td><td>"+monster.wisdom+"</td><td>"+monster.charisma+"</td></tr></tbody></table>" +
+            "<h3>Saves<h3><p><b>Constitution: </b>" + monster.constitution_save + "</p>" +
+            "<p><b>Intelligence: </b>" + monster.intelligence_save + "</p>" +
+            "<p><b>Wisdom: </b>" + monster.wisdom_save + "</p>" +
+            "<p><b>Charisma: </b>" + monster.charisma_save + "</p>";
             
+            display.innerHTML = htmlData;
+
+            //constitution_save (optional)
+            //intelligence_save (optional)
+            //wisdom_save (optional)
+            //charisma_save (optional)
+            //perception
+            //stealth
+            //damage_vulnerabilities
+            //damage_resistances
+            //damage_immunities
+            //condition_immunities
+            //senses
+            //languages
+            //challenge_rating
+            //special_abilities (loop)
+                //attack_bonus
+                //desc
+                //name
+            //actions (loop)
+                //attack_bonus
+                //desc
+                //name
+            //legendary_actions(loop)
+                //attack_bonus
+                //desc
+                //name
         })
         .catch(e => console.log(e));
 }
