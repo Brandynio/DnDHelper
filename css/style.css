@@ -52,14 +52,53 @@ h2{
 
 .statBox{
     border: 3px solid #000000aa;
-    height: auto;
-    width: 60px;
+    width: 100px;
+    height: 100px;
     border-radius: 20px;
-    margin: 25px;
+    margin: 15px;
+    padding: 10px;
+}
 
+#nameBox{
+    width: 440px;
+    margin: 0px;
+    padding: 5px;
 }
 
 .textCenter{
     text-align: center;
 }
 
+
+
+
+.align-left{
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    -webkit-box-align: left;
+    justify-content: left;
+    justify-items: left;
+    justify-self: left;
+    -ms-flex-align: left;
+}
+.align-center{
+    text-align: center;
+    align-content:     center;
+    align-items:       center;
+    -webkit-box-align: center;
+    justify-content:   center;
+    justify-items:     center;
+    justify-self:      center;
+    -ms-flex-align:    center;
+}
+.align-right{
+    text-align: right;
+    align-content:     right;
+    align-items:       right;
+    -webkit-box-align: right;
+    justify-content:   right;
+    justify-items:     right;
+    justify-self:      right;
+    -ms-flex-align:    right;
+}
