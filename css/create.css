@@ -17,6 +17,12 @@
     flex-wrap: wrap;
 }
 
+#ErrorMessage{
+    color: red;
+    text-align: center;
+    width: 100%;
+}
+
 .Content .col{
     display: flex;
     flex: 1;
