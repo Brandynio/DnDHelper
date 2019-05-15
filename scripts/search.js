@@ -142,11 +142,7 @@ function featSearch(search) {
     }
 }
 
-//not finished
 function featChoose(url) {
-
-    //make case for if level is undefined
-    //make case for if prerequisites are undefined
     display.innerHTML = "";
     test.innerHTML = "";
     let htmlData = "";
@@ -155,43 +151,129 @@ function featChoose(url) {
         .then(response => response.json())
         .then(feat =>{
             test.innerHTML = feat.name;
-            htmlData += "<p><strong>Level:</strong> " + feat.level + "</p>" +
-            "<p><strong>Class:</strong> " + feat.class.name + "</p>" +
-            "<h3>Description</h3>" +
-            "<p>" + feat.desc + "<p>"
+            if (feat.level != undefined) {
+                htmlData += "<p><strong>Level:</strong> " + feat.level + "</p>";
+            }
+            htmlData += "<p><strong>Class:</strong> " + feat.class.name + "</p>" +
+            "<h4>Description</h4>";
+            for (let i = 0; i < feat.desc.length; i++) {
+                htmlData += "<p>" + feat.desc[i] + "</p>"
+            }
             display.innerHTML = htmlData;
+            //name
+            //level (optional)
+            //desc (loop)
+            //class
         })
         .catch(e => console.log(e));
 }
 
 function monsterSearch(search) {
+    display.innerHTML = "";
+    test.innerHTML = "";
+    let htmlData = "";
+    error.innerHTML = "";
+    let matches = [];
+    for (let i = 0; i < myData.results.length; i++) {
+        if (myData.results[i].name.includes(search)) {
+            matches.push(myData.results[i]);
+        }
+    }
+    console.log(matches);
+    if (matches.length == 0) {
+        error.innerHTML = "We couldn't find that search term. Please verify that your selection is correct and you've spelled the term correctly."
+    }
+    else {
+        htmlData += "<h3>Matches</h3><h4>Pick one!</h4>";
+        for (let i = 0; i < matches.length; i++) {
+            htmlData += "<p id='match"+ i + "'>" + matches[i].name + "</p>"
+            
+        }
+        display.innerHTML = htmlData;
+        for (let i = 0; i < matches.length; i++) {
+            document.getElementById("match" + i).addEventListener("click", function(){ monsterChoose(matches[i].url)})
+        }
+    }
+}
 
+function monsterChoose(url) {
+    display.innerHTML = "";
+    test.innerHTML = "";
+    let htmlData = "";
+    error.innerHTML = "";
+    fetch(url)
+        .then(response => response.json())
+        .then(monster =>{
+            let dataFields
+            test.innerHTML = monster.name;
+            htmlData += "<p><em>" + monster.size + " " + monster.type;
+            if (monster.subtype != "") {
+                htmlData += " (" + monster.subtype + ")";
+            }
+            htmlData += ", " + monster.alignment + "</em></p>" +
+            "<p><b>Armor Class</b> " + monster.armor_class + "</p>" + 
+            "<p><b>Hit Points</b> " + monster.hit_points + " (" + monster.hit_dice + ")</p>" +
+            "<p><b>Speed</b> " + monster.speed + "</p>" + 
+            "<table><thead><tr><th>STR</th><th>DEX</th><th>CON</th><th>INT</th><th>WIS</th><th>CHA</th></tr></thead><tbody><tr>" +
+"<td>"+monster.strength+"</td><td>"+monster.dexterity+"</td><td>"+monster.constitution+"</td><td>"+monster.intelligence+"</td><td>"+monster.wisdom+"</td><td>"+monster.charisma+"</td></tr></tbody></table>" +
+            "<h3>Saves<h3><p><b>Constitution: </b>" + monster.constitution_save + "</p>" +
+            "<p><b>Intelligence: </b>" + monster.intelligence_save + "</p>" +
+            "<p><b>Wisdom: </b>" + monster.wisdom_save + "</p>" +
+            "<p><b>Charisma: </b>" + monster.charisma_save + "</p>";
+            
+            display.innerHTML = htmlData;
+
+            //constitution_save (optional)
+            //intelligence_save (optional)
+            //wisdom_save (optional)
+            //charisma_save (optional)
+            //perception
+            //stealth
+            //damage_vulnerabilities
+            //damage_resistances
+            //damage_immunities
+            //condition_immunities
+            //senses
+            //languages
+            //challenge_rating
+            //special_abilities (loop)
+                //attack_bonus
+                //desc
+                //name
+            //actions (loop)
+                //attack_bonus
+                //desc
+                //name
+            //legendary_actions(loop)
+                //attack_bonus
+                //desc
+                //name
+        })
+        .catch(e => console.log(e));
 }
 
 function spellSearch(search) {
-    
-    // let singleSpellData;
-    chooseSpell("http://www.dnd5eapi.co/api/spells/2");
-    //replace spaces with '+'
-    // let plusReplace = search.replace(/ /g, "+");
-
-    //check to see if the exact search term exists
-    // fetch("http://www.dnd5eapi.co/api/spells/?name="+plusReplace)
-    //     .then(response => response.json())
-    //     .then(data =>{
+    let htmlData = "";
+    let matches = [];
+    for (let i = 0; i < myData.results.length; i++) {
+        if (myData.results[i].name.includes(search)) {
+            matches.push(myData.results[i]);
+        }
+    }
+    if (matches.length == 0) {
+        error.innerHTML = "We couldn't find that search term. Please verify that your selection is correct and you've spelled the term correctly."
+    }
+    else {
+        htmlData += "<h3>Matches</h3><h4>Pick one!</h4>";
+        for (let i = 0; i < matches.length; i++) {
+            htmlData += "<p id='match"+ i + "'>" + matches[i].name + "</p>"
             
-    //     })
-    //     .catch(e => console.log(e))
-    // }
-}
-function matchSpell(search) {
-    //else, go through all spells to see if any of them contain the search term
-    //add all matches to an array
-    //if the matches array has 1 or more results, display the lists
-    //add event listeners to each spell option
-    //when clicked, it displays the data for the selected spell
-    //else tell the user that the search term couldnt be found
-
+        }
+        display.innerHTML = htmlData;
+        for (let i = 0; i < matches.length; i++) {
+            document.getElementById("match" + i).addEventListener("click", function(){ chooseSpell(matches[i].url)})
+        }
+    }
 }
 
 function chooseSpell(url) {
@@ -218,17 +300,30 @@ function chooseSpell(url) {
                     htmlData += ", ";
                 }
             }
-            htmlData += "</p>"
+            //material (optional)
             if (data.material != undefined) {
-                
+                htmlData += "</p><strong>Material: </strong>" + data.material + "</p>";
             }
-                
-                //material (optional)
-                //concentration
-                //ritual
-                //classes (loop)
-                
-                //desc (loop)
+            //concentration
+            htmlData += "<p><b>Concentration: </b>" + data.concentration + "</p>" +
+            //ritual
+            "<p><b>Ritual: </b>" + data.ritual + "</p>" +
+            "<h4>Class</h4>";
+            //classes (loop)
+            for (let i = 0; i < data.classes.length; i++) {
+                htmlData += "<p>" + data.classes[i].name + "</p>"; 
+            }
+            htmlData += "<h4>Description</h4>"
+            //desc (loop)
+            for (let i = 0; i < data.desc.length; i++) {
+                htmlData += "<p>" + data.desc[i] + "</p>";
+            }
+            if (data.higher_level != undefined) {
+                for (let i = 0; i < data.higher_level.length; i++) {
+                    htmlData += "<p>" + data.higher_level[i] + "</p>";
+                }
+
+            }
                 //higher_level (optional)
             display.innerHTML = htmlData;
         })
