@@ -1,0 +1,54 @@
+.Content{
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.Content .row{
+    display: flex;
+    flex: 1;
+    min-width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#ErrorMessage{
+    color: red;
+    text-align: center;
+    width: 100%;
+}
+
+.Content .col{
+    display: flex;
+    flex: 1;
+    min-width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+section{
+    width: 100%;
+    flex: 1;
+}
+
+h2{
+    flex: 1;
+    width: 100%;
+    text-align: center;
+}
+
+#subBut{
+    background-color: #262626;
+    color: #F2F2F2;
+    transition: 0.5s;
+    border: 1px solid #F2F2F2;
+    margin: auto;
+    margin-top: 3%;
+    width: 100px;
+}

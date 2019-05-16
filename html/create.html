@@ -2,17 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DnD Helper</title>
-    <link href="css/style.css" rel="stylesheet">
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/create.css">
+  <script src="../scripts/create.js"></script>
+  <title>Document</title>
 </head>
 
 <body>
+  <div id="Form" class="Content">
 
-  <div id="Form" class="content">
     <form name="CharacterForm" action="GamePage" onsubmit="return AssingData()" method="POST">
       <div class="Content">
         <section class="col">
@@ -74,8 +75,12 @@
         </section>
       </div>
     </form>
-    <h3 id="ErrorMessage"></h3>
-  </div>
+    <section class="row">
+      <h3 id="ErrorMessage">
+        
+      </h3>
+    </section>
+    </div>
   <section class="Content">
     <section id="CharactersList" class="col CharactersList">
 
