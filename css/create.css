@@ -1,3 +1,10 @@
+/* Color Theme Swatches in Hex */
+.Board-game-in-dungeon-1-hex { color: #F29F05; }
+.Board-game-in-dungeon-2-hex { color: #F28705; }
+.Board-game-in-dungeon-3-hex { color: #BFA380; }
+.Board-game-in-dungeon-4-hex { color: #BF4A06; }
+.Board-game-in-dungeon-5-hex { color: #733122; }
+
 .Content{
     text-align: center;
     flex-direction: column;
@@ -21,6 +28,20 @@
     color: red;
     text-align: center;
     width: 100%;
+}
+
+.CharacterDisp{
+    font-size: 24px;
+    margin: 2% auto;
+    padding: 2%;
+    color: #F2F2F2;
+    background-color: #733122;
+    border: 5px solid #F29F05;
+    border-radius: 25px;
+}
+
+.CharacterDisp :hover{
+
 }
 
 .Content .col{
