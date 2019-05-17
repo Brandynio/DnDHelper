@@ -5,11 +5,11 @@ var path = require('path');
 app.use(express.static('assets'));
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile(path.join(__dirname + '/html/index.html'));
 })
 
 app.get('/dice', function (req, res) {
-    res.sendFile(path.join(__dirname + '/diceroller.html'));
+    res.sendFile(path.join(__dirname + '/html/diceroller.html'));
 })
 
 app.get('/create', function (req, res) {
@@ -17,7 +17,11 @@ app.get('/create', function (req, res) {
 })
 
 app.get('/search', function (req, res) {
-    res.sendFile(path.join(__dirname + '/search.html'));
+    res.sendFile(path.join(__dirname + '/html/search.html'));
+})
+
+app.get('/display', function (req, res) {
+    res.sendFile(path.join(__dirname + '/html/display.html'));
 })
 
 app.listen(3000);
