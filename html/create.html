@@ -5,80 +5,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/create.css">
+  <link rel="stylesheet" href="../css/style_scss.css">
   <script src="../scripts/create.js"></script>
   <title>Document</title>
 </head>
 
-<body>
-  <div id="Form" class="content">
-    <form name="CharacterForm" action="GamePage.html" onsubmit="return AssingData()" method="POST">
-      <div class="Content">
-        <section class="row">
-          <h2>
-            Character traits
-          </h2>
-        </section>
-        <section class="row">
-          <section>
-            Character Name:<br>
-            <input type="text" name="CharacterN">
+<body class="Content-full bkgr_B">
+  <section class="Content bkgr_B">
+    <nav>
+      <li>
+        <a href="index.html">Home TBA</a>
+      </li>
+      <li>
+        <a href="create.html">create</a>
+      </li>
+      <li>
+        <a href="diceroller.html">Diceroller</a>
+      </li>
+      <li>
+        <a href="search.html">Search</a>
+      </li>
+    </nav>
+  </section>
+
+  <section class="Content bkgr_W">
+
+    <div id="Form" class="Content-full">
+      <form name="CharacterForm" action="GamePage" onsubmit="return AssingData()" method="POST">
+        <div class="Content">
+          <section class="row">
+            <h2>
+              Character traits
+            </h2>
           </section>
-          <section>
-            Character Class:<br>
-            <input type="text" name="CharacterCl">
+          <section class="col">
+            <section>
+              Character Name:<br>
+              <input type="text" name="CharacterN">
+            </section>
+            <section>
+              Character Class:<br>
+              <input type="text" name="CharacterCl">
+            </section>
+            <section>
+              Character Level:<br>
+              <input type="text" name="CharacterLvl">
+            </section>
+            <section>
+              Character Race:<br>
+              <input type="text" name="CharacterRc">
+            </section>
           </section>
-          <section>
-            Character Level:<br>
-            <input type="text" name="CharacterLvl">
+          <section class="row">
+            <h2>
+              Character Stats
+            </h2>
           </section>
-          <section>
-            Character Race:<br>
-            <input type="text" name="CharacterRc">
+          <section class="col">
+            <section>
+              Strength:<br>
+              <input type="number" name="StatStr">
+            </section>
+            <section>
+              Dexterity:<br>
+              <input type="number" name="StatDex">
+            </section>
+            <section>
+              Constitution:<br>
+              <input type="number" name="StatCon">
+            </section>
+            <section>
+              Intelligence:<br>
+              <input type="number" name="StatInt">
+            </section>
+            <section>
+              Wisdom:<br>
+              <input type="number" name="StatWis">
+            </section>
+            <section>
+              Charisma:<br>
+              <input type="number" name="StatCar">
+            </section>
           </section>
-        </section>
-        <section class="row">
-          <h2>
-            Character Stats
-          </h2>
-        </section>
-        <section class="row">
-          <section>
-            Strength:<br>
-            <input type="number" name="StatStr">
+          <section class="row">
+            <input id="subBut" type="submit">
           </section>
-          <section>
-            Dexterity:<br>
-            <input type="number" name="StatDex">
-          </section>
-          <section>
-            Constitution:<br>
-            <input type="number" name="StatCon">
-          </section>
-          <section>
-            Intelligence:<br>
-            <input type="number" name="StatInt">
-          </section>
-          <section>
-            Wisdom:<br>
-            <input type="number" name="StatWis">
-          </section>
-          <section>
-            Charisma:<br>
-            <input type="number" name="StatC">
-          </section>
-        </section>
-        <section class="row">
-          <input id="subBut" type="submit">
-        </section>
-      </div>
-    </form>
-    <h3 id="ErrorMessage"></h3>
-  </div>
-  <section class="row">
-    <div id="Characters">
-      
+        </div>
+      </form>
+      <section class="col">
+        <h3 id="ErrorMessage">
+
+        </h3>
+      </section>
     </div>
+    <section class="Content">
+      <section id="CharactersList" class="row CharactersList">
+
+      </section>
+    </section>
   </section>
 
 </body>

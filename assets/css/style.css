@@ -1,9 +1,30 @@
+<<<<<<< HEAD:assets/css/style.css
+=======
+
+/*
+ White = #ffffff
+ Black = #282329
+ Gray = #939297
+ Red = #D12426
+ Yellow = #FBDF1C
+ Blue = #1D5F91
+*/
+html{
+    background-image: url("../assets/Old_Paper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto; 
+    width: 100%
+}
+
+>>>>>>> master:css/style.css
 #error{
     color: red;
 }
 .Content{
     text-align: center;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     display: flex;
     width: 100%;
@@ -17,6 +38,14 @@
     min-width: 100%;
     max-width: 100%;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Content .col{
+    display: flex;
+    flex: 1;
+    max-width: 100%;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
@@ -36,6 +65,76 @@ h2{
     color: #F2F2F2;
     transition: 0.5s;
     border: 1px solid #F2F2F2;
-    margin: 5% 47%;
+    margin: auto;
+    margin-top: 3%;
     width: 100px;
 }
+<<<<<<< HEAD:assets/css/style.css
+=======
+
+.statBox{
+    border: 3px solid #000000aa;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin: 15px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+#nameBox{
+    width: 440px;
+    margin: 0px;
+    padding: 5px;
+}
+
+#Background{
+    z-index: -1;
+    background-image: url(../assets/Old-Paper.png);
+}
+
+#placer{
+    width: 196px;
+    height: 350px;
+    min-width: 2%;
+    margin: 0px 5%;
+}
+#ct{
+    margin: 0px;
+}
+
+.textCenter{
+    text-align: center;
+}
+
+.align-left{
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    -webkit-box-align: left;
+    justify-content: left;
+    justify-items: left;
+    justify-self: left;
+    -ms-flex-align: left;
+}
+.align-center{
+    text-align: center;
+    align-content:     center;
+    align-items:       center;
+    -webkit-box-align: center;
+    justify-content:   center;
+    justify-items:     center;
+    justify-self:      center;
+    -ms-flex-align:    center;
+}
+.align-right{
+    text-align: right;
+    align-content:     right;
+    align-items:       right;
+    -webkit-box-align: right;
+    justify-content:   right;
+    justify-items:     right;
+    justify-self:      right;
+    -ms-flex-align:    right;
+}
+>>>>>>> master:css/style.css
