@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 #error{
     color: red;
 }
-=======
 .Content{
     text-align: center;
     flex-direction: row;
@@ -41,4 +39,3 @@ h2{
     margin: 5% 47%;
     width: 100px;
 }
->>>>>>> master
