@@ -8,6 +8,10 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/html/index.html'));
 })
 
+app.get('/index', function (req, res) {
+    res.sendFile(path.join(__dirname + '/html/index.html'));
+})
+
 app.get('/dice', function (req, res) {
     res.sendFile(path.join(__dirname + '/html/diceroller.html'));
 })
