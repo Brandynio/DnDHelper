@@ -1,4 +1,21 @@
 
+/*
+ White = #ffffff
+ Black = #282329
+ Gray = #939297
+ Red = #D12426
+ Yellow = #FBDF1C
+ Blue = #1D5F91
+*/
+html{
+    background-image: url("../Old_Paper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto; 
+    width: 100%
+}
+
 #error{
     color: red;
 }
@@ -24,7 +41,6 @@
 .Content .col{
     display: flex;
     flex: 1;
-    min-width: 100%;
     max-width: 100%;
     flex-direction: column;
     flex-wrap: wrap;
@@ -46,7 +62,8 @@ h2{
     color: #F2F2F2;
     transition: 0.5s;
     border: 1px solid #F2F2F2;
-    margin: 5% 47%;
+    margin: auto;
+    margin-top: 3%;
     width: 100px;
 }
 
@@ -57,6 +74,7 @@ h2{
     border-radius: 20px;
     margin: 15px;
     padding: 10px;
+    background-color: #fff;
 }
 
 #nameBox{
@@ -65,12 +83,24 @@ h2{
     padding: 5px;
 }
 
+#Background{
+    z-index: -1;
+    background-image: url(../Old-Paper.png);
+}
+
+#placer{
+    width: 196px;
+    height: 350px;
+    min-width: 2%;
+    margin: 0px 5%;
+}
+#ct{
+    margin: 0px;
+}
+
 .textCenter{
     text-align: center;
 }
-
-
-
 
 .align-left{
     text-align: left;
