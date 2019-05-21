@@ -52,7 +52,6 @@ section{
 }
 
 h2{
-    flex: 1;
     width: 100%;
     text-align: center;
 }
@@ -81,6 +80,10 @@ h2{
     width: 440px;
     margin: 0px;
     padding: 5px;
+    margin-left: 80px;
+}
+#displayTraits{
+    flex: 2;
 }
 
 #Background{
@@ -89,13 +92,14 @@ h2{
 }
 
 #placer{
-    width: 196px;
+    width: 100px;
     height: 350px;
     min-width: 2%;
     margin: 0px 5%;
+    flex: 1;
 }
 #ct{
-    margin: 0px;
+    margin: 50px 0px 50px 220px;
 }
 
 .textCenter{
