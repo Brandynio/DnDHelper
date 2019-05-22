@@ -6,3 +6,8 @@ const createAccount = () => {
         console.log("Passwords don't match");
     }
 }
+
+const logIn = () => {
+    let username = document.forms['login']['username'].value;
+    let password = document.forms['login']['password'].value;
+}
