@@ -5,6 +5,16 @@
 .Board-game-in-dungeon-4-hex { color: #BF4A06; }
 .Board-game-in-dungeon-5-hex { color: #733122; }
 
+
+html{
+    background-image: url("../Old_Paper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto; 
+    width: 100%
+}
+
 .Content{
     text-align: center;
     flex-direction: column;
@@ -35,13 +45,24 @@
     margin: 2% auto;
     padding: 2%;
     color: #F2F2F2;
-    background-color: #733122;
-    border: 5px solid #F29F05;
+    background-color: #F29F05;
+    border: 5px solid #733122;
+    border-radius: 25px;
+}
+
+.mainView{
+    font-size: 24px;
+    margin: 2% auto;
+    padding: 2%;
+    color: #F2F2F2;
+    background-color: #F29F05;
+    border: 5px solid #733122;
     border-radius: 25px;
 }
 
 .CharacterDisp :hover{
-
+    background-color: #BF4A06;
+    transition: 1s ease-in;
 }
 
 .Content .col{

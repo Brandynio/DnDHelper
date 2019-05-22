@@ -694,12 +694,12 @@ nav li {
 nav li a {
   font-size: 20px;
   text-align: center;
-  color: #F2F2F2;
+  color: #733122;
   transition: 0.5s;
   padding: 10px 10px;
 }
 nav li a:hover {
-  color: #bfbfbf;
+  color: #BF4A06;
 }
 nav li a:active {
   color: #ec2815;
