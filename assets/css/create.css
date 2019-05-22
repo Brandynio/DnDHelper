@@ -1,0 +1,96 @@
+/* Color Theme Swatches in Hex */
+.Board-game-in-dungeon-1-hex { color: #F29F05; }
+.Board-game-in-dungeon-2-hex { color: #F28705; }
+.Board-game-in-dungeon-3-hex { color: #BFA380; }
+.Board-game-in-dungeon-4-hex { color: #BF4A06; }
+.Board-game-in-dungeon-5-hex { color: #733122; }
+
+
+html{
+    background-image: url("../Old_Paper.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto; 
+    width: 100%
+}
+
+.Content{
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.Content .row{
+    display: flex;
+    flex: 1;
+    min-width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#ErrorMessage{
+    color: red;
+    text-align: center;
+    width: 100%;
+}
+
+.CharacterDisp{
+    font-size: 24px;
+    margin: 2% auto;
+    padding: 2%;
+    color: #F2F2F2;
+    background-color: #F29F05;
+    border: 5px solid #733122;
+    border-radius: 25px;
+}
+
+.mainView{
+    font-size: 24px;
+    margin: 2% auto;
+    padding: 2%;
+    color: #F2F2F2;
+    background-color: #F29F05;
+    border: 5px solid #733122;
+    border-radius: 25px;
+}
+
+.CharacterDisp :hover{
+    background-color: #BF4A06;
+    transition: 1s ease-in;
+}
+
+.Content .col{
+    display: flex;
+    flex: 1;
+    min-width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+section{
+    width: 100%;
+    flex: 1;
+}
+
+h2{
+    flex: 1;
+    width: 100%;
+    text-align: center;
+}
+
+#subBut{
+    background-color: #262626;
+    color: #F2F2F2;
+    transition: 0.5s;
+    border: 1px solid #F2F2F2;
+    margin: auto;
+    margin-top: 3%;
+    width: 100px;
+}

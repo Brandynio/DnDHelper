@@ -8,7 +8,7 @@
  Blue = #1D5F91
 */
 html{
-    background-image: url("../assets/Old_Paper.jpg");
+    background-image: url("../Old_Paper.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -88,7 +88,7 @@ h2{
 
 #Background{
     z-index: -1;
-    background-image: url(../assets/Old-Paper.png);
+    background-image: url(../Old-Paper.png);
 }
 
 #placer{

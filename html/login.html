@@ -26,25 +26,16 @@
             </li>
         </nav>
     </section>
-    <section class="Content">
-        <form>
-            <select id="searchType" name="searchType">
-                <option value="classes">Classes</option>
-                <option value="features">Features</option>
-                <!-- <option value="monsters">Monsters</option> -->
-                <option value="spells">Spells</option>
-            </select>
-            <input id="searchBar" type='text' name="searchTerm">
-            <input type="button" onclick="search()" value="Search">
-        </form>
-        <h2 id="name"></h2>
-        <h4 id="error"></h4>
-
-        <div id="displayData">
-
-        </div>
-    </section>
-    <script src="../assets/scripts/search.js"></script>
+    <h2>Log In</h2>
+    <form name="login" onsubmit="logIn()">
+        <label>Username</label>
+        <input type="text" id="username"><br/>
+        <label>Password</label>
+        <input type="password" id="username"><br/>
+        <input type="submit" value="Log In">
+    </form>
+    <p>New user? <a href="signup.html">Create an account!</a></p>
+    <script src="../assets/scripts/account.js"></script>    
 </body>
 
 </html>

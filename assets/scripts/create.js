@@ -57,10 +57,11 @@ function AddCharacter() {
     //Create html elements 
     CharacterDiv = document.createElement('div');
     CharacterDiv.setAttribute('Class', 'CharElement');
-    var CTextBlock = document.createElement('p');
+    var CTextBlock = document.createElement('div');
+    CTextBlock.className = "CharacterDisp";
     console.log(newCha);
     //Adding character charactersitics 
-    var CText = document.createTextNode(newCha.Name + " The" + newCha.Race + ", a level " + newCha.Level + " " + newCha.CharacterClass);
+    var CText = document.createTextNode(newCha.Name + " The " + newCha.Race + ", a level " + newCha.Level + " " + newCha.CharacterClass);
     CTextBlock.appendChild(CText);
     CharacterDiv.appendChild(CTextBlock);
     document.getElementById("CharactersList").appendChild(CTextBlock);
