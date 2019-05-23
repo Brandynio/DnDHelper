@@ -16,6 +16,45 @@ html{
     width: 100%
 }
 
+
+nav {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: 50px;
+    margin: 2% 8%;
+  }
+  nav li {
+    padding-top: 10px;
+    flex: 1;
+    list-style: none;
+    transition: 0.5;
+  }
+  nav li a {
+    font-size: 20px;
+    text-align: center;
+    color: #733122;
+    transition: 0.5s;
+    padding: 10px 10px;
+  }
+  nav li a:hover {
+    color: #BF4A06;
+  }
+  nav li a:active {
+    color: #ec2815;
+  }
+  
+  .mainView{
+    font-size: 24px;
+    margin: 2% auto;
+    padding: 2%;
+    color: #F2F2F2;
+    background-color: #F29F05;
+    border: 5px solid #733122;
+    border-radius: 25px;
+  }
+  
+
 #error{
     color: red;
 }
@@ -24,7 +63,7 @@ html{
     flex-direction: column;
     flex-wrap: wrap;
     display: flex;
-    width: 100%;
+    width: 99%;
     flex: 0 0 100%;
     max-width: 100%;
 }
@@ -69,12 +108,19 @@ h2{
 
 .statBox{
     border: 3px solid #000000aa;
-    width: 100px;
+    width: 100%;
+    flex: 1;
     height: 100px;
     border-radius: 20px;
     margin: 15px;
     padding: 10px;
     background-color: #fff;
+    color: #262626;
+}
+
+.statBox h3{
+    margin: auto;
+    font-size: 20px;
 }
 
 #nameBox{
@@ -96,6 +142,16 @@ h2{
 }
 #ct{
     margin: 0px;
+}
+
+#displayStats{
+    display: flex;
+    flex-direction: row;
+}
+
+#displayTraits{
+    display: flex;
+    flex-direction: row;
 }
 
 .textCenter{
@@ -131,4 +187,8 @@ h2{
     justify-items:     right;
     justify-self:      right;
     -ms-flex-align:    right;
+}
+#DiceRollerCont{
+    flex-direction: column;
+    height: max-content;
 }

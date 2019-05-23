@@ -24,6 +24,15 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+html{
+  background-image: url("../Old_Paper.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto; 
+  width: 100%
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -890,6 +899,16 @@ footer {
   background-color: black;
   color: #F2F2F2;
   padding: 2% 12%;
+}
+
+.mainView{
+  font-size: 24px;
+  margin: 2% auto;
+  padding: 2%;
+  color: #F2F2F2;
+  background-color: #F29F05;
+  border: 5px solid #733122;
+  border-radius: 25px;
 }
 
 @media all and (max-width: 1000px) {

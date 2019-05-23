@@ -44,8 +44,10 @@ function validate() {
     var CharName_patt = /[a-z]{2,}/i;
     if (CharName_patt.test(crctName)) {
         AddCharacter();
-    }else{
-        document.getElementById('ErrorMessage').innerHTML = "User name must have at least 2 letters"   }
+    } else {
+        crctName
+        document.getElementById('ErrorMessdssage').innerHTML = "User name must have at least 2 letters"
+    }
 }
 
 function AddCharacter() {

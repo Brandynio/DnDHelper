@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link href="../assets/css/style_scss.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style_scss.css">
 
 </head>
 
 <body class="Content">
-  <section class="Content bkgr_B">
+  <section class="Content">
     <nav>
       <li>
         <a href="index.html">Home TBA</a>
@@ -28,16 +29,26 @@
       </li>
     </nav>
   </section>
-  <section class="Content">
-    <div id="error"></div>
-    <div>Num. of Dice:</div>
-    <input type="number" min="1" max="100" id="dNumber">
-    <div>Num. of Sides:</div>
-    <input type="number" min="2" max="100" id="dSides">
-    <div>Choose One or Both:</div>
-    <input type="checkbox" name="Total Amount" class="cbox" id="1">Total Amount on Rolls <br />
-    <input type="checkbox" name="One by One Rolls" class="cbox" id="2">Sepereate Amount on Rolls <br />
-    <button id="btn" onclick="rollDice()">Enter</button>
+  <section id="DiceRollerCont" class="Content mainView">
+    <section class="row">
+      <div id="error"></div>
+      <section>
+        <div>Num. of Dice:</div>
+        <input type="number" min="1" max="100" id="dNumber">
+      </section>
+      <section>
+        <div>Num. of Sides:</div>
+        <input type="number" min="2" max="100" id="dSides">
+      </section>
+    </section>
+    <section class="col">
+      <div>Choose One or Both:</div>
+      <section>
+        <input type="checkbox" name="Total Amount" class="cbox" id="1">Total Amount on Rolls <br />
+        <input type="checkbox" name="One by One Rolls" class="cbox" id="2">Sepereate Amount on Rolls <br />
+      </section>
+    </section>
+    <button id="btn" class="button-standard" onclick="rollDice()">Enter</button>
   </section>
   <script src="../assets/scripts/script.js""></script>
 </body>
