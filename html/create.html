@@ -5,31 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../css/create.css">
-  <link rel="stylesheet" href="../css/style_scss.css">
-  <script src="../scripts/create.js"></script>
+  <link rel="stylesheet" href="../assets/css/create.css">
+  <link rel="stylesheet" href="../assets/css/style_scss.css">
+  <script src="../assets/scripts/create.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <title>Document</title>
 </head>
 
-<body class="Content-full bkgr_B">
-  <section class="Content bkgr_B">
+<body class="Content-full">
+  <section class="Content">
     <nav>
       <li>
-        <a href="index">Home TBA</a>
+        <a href="index.html">Home TBA</a>
       </li>
       <li>
-        <a href="create">Create</a>
+        <a href="create.html">Create</a>
       </li>
       <li>
-        <a href="dice">Diceroller</a>
+        <a href="diceroller.html">Diceroller</a>
       </li>
       <li>
-        <a href="search">Search</a>
+        <a href="search.html">Search</a>
       </li>
     </nav>
   </section>
 
-  <section class="Content bkgr_W">
+  <section class="Content mainView">
 
     <div id="Form" class="Content-full">
       <form name="CharacterForm" action="GamePage" onsubmit="return AssingData()" method="POST">
@@ -41,19 +43,19 @@
           </section>
           <section class="col">
             <section>
-              Character Name:<br>
+              Name:<br>
               <input type="text" name="CharacterN">
             </section>
             <section>
-              Character Class:<br>
+              Class:<br>
               <input type="text" name="CharacterCl">
             </section>
             <section>
-              Character Level:<br>
+              Level:<br>
               <input type="text" name="CharacterLvl">
             </section>
             <section>
-              Character Race:<br>
+              Race:<br>
               <input type="text" name="CharacterRc">
             </section>
           </section>

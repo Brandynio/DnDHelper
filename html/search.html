@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../assets/css/style_scss.css">
     <title>Document</title>
 </head>
-<body>
-    <header>
+
+<body class="Content">
+    <section class="Content bkgr_B">
         <nav>
-            <ul>
-                <a href="../html/create.html"><li>Create A Character</li></a>
-                <a href="../html/display.html"><li>See Character</li></a>
-                <a href="../html/diceroller.html"><li>Roll Dice</li></a>
-                <a href="../html/search.html"><li>Search</li></a>
-            </ul>
+            <li>
+                <a href="index.html">Home TBA</a>
+            </li>
+            <li>
+                <a href="create.html">Create</a>
+            </li>
+            <li>
+                <a href="diceroller.html">Diceroller</a>
+            </li>
+            <li>
+                <a href="search.html">Search</a>
+            </li>
         </nav>
-    </header>
-    <form>
-        <select id="searchType" name="searchType">
-            <option value="classes">Classes</option>
-            <option value="features">Features</option>
-            <!-- <option value="monsters">Monsters</option> -->
-            <option value="spells">Spells</option>
-        </select>
-        <input id="searchBar" type='text' name="searchTerm">
-        <input type="button" onclick="search()" value="Search">
-    </form>
-    <h2 id="name"></h2>
-    <h4 id="error"></h4>
-    
-    <div id="displayData">
-        
-    </div>
-    <script src="../scripts/search.js"></script>
+    </section>
+    <section class="Content">
+        <form>
+            <select id="searchType" name="searchType">
+                <option value="classes">Classes</option>
+                <option value="features">Features</option>
+                <!-- <option value="monsters">Monsters</option> -->
+                <option value="spells">Spells</option>
+            </select>
+            <input id="searchBar" type='text' name="searchTerm">
+            <input type="button" onclick="search()" value="Search">
+        </form>
+        <h2 id="name"></h2>
+        <h4 id="error"></h4>
+
+        <div id="displayData">
+
+        </div>
+    </section>
+    <script src="../assets/scripts/search.js"></script>
 </body>
+
 </html>
