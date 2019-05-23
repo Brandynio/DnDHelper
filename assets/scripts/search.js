@@ -170,19 +170,31 @@ function monsterSearch(search) {
 
 function spellSearch(search) {
     
-    // let singleSpellData;
-    chooseSpell("http://www.dnd5eapi.co/api/spells/2");
-    //replace spaces with '+'
-    // let plusReplace = search.replace(/ /g, "+");
-
-    //check to see if the exact search term exists
-    // fetch("http://www.dnd5eapi.co/api/spells/?name="+plusReplace)
-    //     .then(response => response.json())
-    //     .then(data =>{
+    display.innerHTML = "";
+    test.innerHTML = "";
+    let htmlData = "";
+    error.innerHTML = "";
+    let matches = [];
+    for (let i = 0; i < myData.results.length; i++) {
+        if (myData.results[i].name.includes(search)) {
+            matches.push(myData.results[i]);
+        }
+    }
+    console.log(matches);
+    if (matches.length == 0) {
+        error.innerHTML = "We couldn't find that search term. Please verify that your selection is correct and you've spelled the term correctly."
+    }
+    else {
+        htmlData += "<h3>Matches</h3><h4>Pick one!</h4>";
+        for (let i = 0; i < matches.length; i++) {
+            htmlData += "<p id='match"+ i + "'>" + matches[i].name + "</p>"
             
-    //     })
-    //     .catch(e => console.log(e))
-    // }
+        }
+        display.innerHTML = htmlData;
+        for (let i = 0; i < matches.length; i++) {
+            document.getElementById("match" + i).addEventListener("click", function(){ chooseSpell(matches[i].url)})
+        }
+    }
 }
 function matchSpell(search) {
     //else, go through all spells to see if any of them contain the search term
