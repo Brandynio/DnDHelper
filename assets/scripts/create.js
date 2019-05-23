@@ -50,15 +50,36 @@ function validate() {
 
 function AddCharacter() {
     //Create character and add to character array
+    
     console.log(crctName);
     var newCha = new character(crctName, crctClass, crctLevel,
         crctRace, StatStr, StatDex, StatCon, StatInt, StatWis, StatCar);
-    Characters.push(newCha);
+    
+    tempCharacter = {
+        name: newCha.crctName,
+        class: newCha.crctClass,
+        level: newCha.crctLevel,
+        race: newCha.crctRace,
+        str: newCha.StatStr,
+        dex: newCha.StatDex,
+        con: newCha.StatCon,
+        int: newCha.StatInt,
+        wis: newCha.StatWis,
+        cha: newCha.StatCar
+    }
+    Characters.push(tempCharacter);
+    localStorage.setItem('characters', JSON.stringify(Characters));
     //Create html elements 
+    loadCharacters();
+}
+
+const loadCharacters = () => {
+    Characters = JSON.parse(localStorage.getItem("characters"))
     CharacterDiv = document.createElement('div');
     CharacterDiv.setAttribute('Class', 'CharElement');
     var CTextBlock = document.createElement('div');
     CTextBlock.className = "CharacterDisp";
+    localStorage.setItem(crctName, )
     console.log(newCha);
     //Adding character charactersitics 
     var CText = document.createTextNode(newCha.Name + " The " + newCha.Race + ", a level " + newCha.Level + " " + newCha.CharacterClass);
