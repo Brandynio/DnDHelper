@@ -28,4 +28,14 @@ app.get('/display', function (req, res) {
     res.sendFile(path.join(__dirname + '/html/display.html'));
 })
 
+app.get('/signup', function (req, res) {
+    res.sendFile(path.join(__dirname + '/html/signup.html'));
+})
+
+app.get('/login', function (req, res) {
+    res.sendFile(path.join(__dirname + '/html/login.html'));
+})
+
+
+
 app.listen(3000);
