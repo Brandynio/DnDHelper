@@ -75,15 +75,18 @@ function AddCharacter() {
 
 const loadCharacters = () => {
     Characters = JSON.parse(localStorage.getItem("characters"))
-    CharacterDiv = document.createElement('div');
-    CharacterDiv.setAttribute('Class', 'CharElement');
-    var CTextBlock = document.createElement('div');
-    CTextBlock.className = "CharacterDisp";
-    localStorage.setItem(crctName, )
-    console.log(newCha);
-    //Adding character charactersitics 
-    var CText = document.createTextNode(newCha.Name + " The " + newCha.Race + ", a level " + newCha.Level + " " + newCha.CharacterClass);
-    CTextBlock.appendChild(CText);
-    CharacterDiv.appendChild(CTextBlock);
-    document.getElementById("CharactersList").appendChild(CTextBlock);
+    localStorage.setItem("currentCharacter", "hello?")
+    let str = "<a href='display.html'>click me to display</a>"
+    document.getElementById("test").innerHTML = str;
+    // CharacterDiv = document.createElement('div');
+    // CharacterDiv.setAttribute('Class', 'CharElement');
+    // var CTextBlock = document.createElement('div');
+    // CTextBlock.className = "CharacterDisp";
+    // localStorage.setItem(crctName, )
+    // console.log(newCha);
+    // //Adding character charactersitics 
+    // var CText = document.createTextNode(newCha.Name + " The " + newCha.Race + ", a level " + newCha.Level + " " + newCha.CharacterClass);
+    // CTextBlock.appendChild(CText);
+    // CharacterDiv.appendChild(CTextBlock);
+    // document.getElementById("CharactersList").appendChild(CTextBlock);
 }
