@@ -1,16 +1,16 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var expressSession = require('express-session');
+// var expressSession = require('express-session');
 
 app.use(express.static('assets'));
 
-app.use(session({
-    key: 'userid',
-    secret: 'mandoorhandhookcardoor',
-    saveUninitialized: false,
-    resave: false
-}));
+// app.use(session({
+//     key: 'userid',
+//     secret: 'mandoorhandhookcardoor',
+//     saveUninitialized: false,
+//     resave: false
+// }));
 
 //login not required
 app.get('/', function (req, res) {
