@@ -442,13 +442,22 @@ table {
   }
 }
 .Scrollable {
-  height: 400px;
+  height: 500px;
   overflow-y: auto;
+  border-radius: 30px;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  border: 5px solid #733122;
+  transition: ease;
 }
 
+.Scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+
 .ScrollHeader {
-  background-color: #F2F2F2;
-  color: #262626;
+  background-color: #BF4A06;
   font-size: 40px;
   padding: 8% 0%;
   width: 100%;
@@ -459,10 +468,21 @@ table {
   transition: 0.5s;
 }
 
+.ScrollHeader h2{
+  color: #F2F2F2;
+}
+
 .ScrollBody {
   padding: 15px 15px;
   font-size: 30px;
   color: #F2F2F2;
+  background-color: #F29F05;
+  transition: ease;
+}
+
+.ScrollBody h2{
+  margin: 10px 25px;
+  margin-top: 70px;
 }
 
 .notifButton {
