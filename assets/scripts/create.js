@@ -11,6 +11,8 @@ var StatCar;
 var Characters = [];
 var characterIndex = 0;
 
+
+
 function character(CName, CClass, CLevel, CRace, SStr, SDex, SCon, SInt, SWis, SChar) {
     this.Name = CName;
     this.CharacterClass = CClass;
@@ -52,22 +54,22 @@ function validate() {
 
 function AddCharacter() {
     //Create character and add to character array
-    
+    console.log("in AddCharacter")
     console.log(crctName);
     var newCha = new character(crctName, crctClass, crctLevel,
         crctRace, StatStr, StatDex, StatCon, StatInt, StatWis, StatCar);
     
     tempCharacter = {
-        name: newCha.crctName,
-        class: newCha.crctClass,
-        level: newCha.crctLevel,
-        race: newCha.crctRace,
-        str: newCha.StatStr,
-        dex: newCha.StatDex,
-        con: newCha.StatCon,
-        int: newCha.StatInt,
-        wis: newCha.StatWis,
-        cha: newCha.StatCar
+        name: crctName,
+        class: crctClass,
+        level: crctLevel,
+        race: crctRace,
+        str: StatStr,
+        dex: StatDex,
+        con: StatCon,
+        int: StatInt,
+        wis: StatWis,
+        cha: StatCar
     }
     Characters.push(tempCharacter);
     localStorage.setItem('characters', JSON.stringify(Characters));
@@ -76,10 +78,21 @@ function AddCharacter() {
 }
 
 const loadCharacters = () => {
+    console.log("in loadCharacters")
     Characters = JSON.parse(localStorage.getItem("characters"))
-    localStorage.setItem("currentCharacter", "hello?")
-    let str = "<a href='display.html'>click me to display</a>"
-    document.getElementById("test").innerHTML = str;
+    let charList = document.getElementById("CharactersList");
+    let charListContent = "";
+    for (let i = 0; i < Characters.length; i++) {
+        charListContent += "<div class='CharElement'><div id='char" + i + "'class='CharacterDisp'><a href='display.html'>" + Characters[i].name + " the " +
+        Characters[i].race + ", a level " + Characters[i].level + " " + Characters[i].class + "</a></div></div>"
+    }
+    charList.innerHTML = charListContent;
+    for (let i = 0; i < Characters.length; i++) {
+        let id = "char" + i;
+        document.getElementById(id).addEventListener("click",() => {
+            localStorage.setItem("currentCharacter", JSON.stringify(Characters[i]));
+        });
+    }
     // CharacterDiv = document.createElement('div');
     // CharacterDiv.setAttribute('Class', 'CharElement');
     // var CTextBlock = document.createElement('div');
@@ -92,3 +105,5 @@ const loadCharacters = () => {
     // CharacterDiv.appendChild(CTextBlock);
     // document.getElementById("CharactersList").appendChild(CTextBlock);
 }
+
+loadCharacters();
