@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../assets/css/create.css">
   <link rel="stylesheet" href="../assets/css/style_scss.css">
-  <script src="../assets/scripts/create.js"></script>
+  
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <title>Document</title>
@@ -32,9 +32,7 @@
       </li>
     </nav>
   </section>
-
   <section class="Content mainView">
-
     <div id="Form" class="Content-full">
       <form name="CharacterForm" action="GamePage" onsubmit="return AssingData()" method="POST">
         <div class="Content">
@@ -51,6 +49,10 @@
             <section>
               Class:<br>
               <input type="text" name="CharacterCl">
+            </section>
+            <section>
+              HP:<br>
+              <input type="number" name="StatHP">
             </section>
             <section>
               Level:<br>
@@ -105,11 +107,10 @@
     </div>
     <section class="Content">
       <section id="CharactersList" class="row CharactersList">
-
       </section>
     </section>
   </section>
-
+  <script src="../assets/scripts/create.js"></script>
 </body>
 
 </html>
