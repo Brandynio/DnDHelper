@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="./../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style_scss.css">
     <title>Document</title>
 </head>
-<body>
-        <section class="Content">
-                <nav>
-                    <li>
-                        <a href="index.html">Home TBA</a>
-                    </li>
-                    <li>
-                        <a href="create.html">Create</a>
-                    </li>
-                    <li>
-                        <a href="diceroller.html">Diceroller</a>
-                    </li>
-                    <li>
-                        <a href="search.html">Search</a>
-                    </li>
-                    <li>
-                        <a href="initiative.html">Initiative Tracker</a>
-                      </li>
-                </nav>
-            </section>
-    <div id="initiativeTracker">
-        <div id="displayInitiativeDiv">
+
+<body class="Content">
+    <section class="Content">
+        <nav>
+            <li>
+                <a href="index.html">Home TBA</a>
+            </li>
+            <li>
+                <a href="create.html">Create</a>
+            </li>
+            <li>
+                <a href="diceroller.html">Diceroller</a>
+            </li>
+            <li>
+                <a href="search.html">Search</a>
+            </li>
+            <li>
+                    <a href="initiative.html">Initiative Tracker</a>
+                  </li>
+        </nav>
+    </section>
+    <section class="Content mainView">
+        <div id="initiativeTracker">
+            <div id="displayInitiativeDiv">
             <p id="firstInitiative" class="displayInitiative">None</p>
             <p id="secondInitiative" class="displayInitiative">None</p>
             <p id="thirdInitiative" class="displayInitiative">None</p>
@@ -50,7 +54,9 @@
             <div id="removePlayerMonster" class="initiativeButton">Remove Player/Monster</div>
 
         </div>
-    </div>
+        </div>
+    </section>
+
     <script src="./../scripts/script.js"></script>
 </body>
 
