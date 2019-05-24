@@ -1,6 +1,7 @@
 var crctName;
 var crctClass;
 var crctLevel;
+var StatHP
 var crctRace;
 var StatStr;
 var StatDex;
@@ -30,6 +31,7 @@ function AssingData() {
     crctName = document.forms['CharacterForm']['CharacterN'].value;
     crctClass = document.forms['CharacterForm']['CharacterCl'].value;
     crctLevel = document.forms['CharacterForm']['CharacterLvl'].value;
+    StatHP = document.forms['CharacterForm']['StatHP'].value;
     crctRace = document.forms['CharacterForm']['CharacterRc'].value;
     StatStr = document.forms['CharacterForm']['StatStr'].value;
     StatDex = document.forms['CharacterForm']['StatDex'].value;
@@ -63,6 +65,7 @@ function AddCharacter() {
         name: crctName,
         class: crctClass,
         level: crctLevel,
+        hp: StatHP,
         race: crctRace,
         str: StatStr,
         dex: StatDex,
