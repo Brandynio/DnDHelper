@@ -60,7 +60,7 @@ html{
     border-radius: 25px;
 }
 
-.CharacterDisp :hover{
+.CharacterDisp:hover{
     background-color: #BF4A06;
     transition: 1s ease-in;
 }
@@ -93,4 +93,9 @@ h2{
     margin: auto;
     margin-top: 3%;
     width: 100px;
+}
+
+a {
+    text-decoration: none;
+    
 }

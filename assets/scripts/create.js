@@ -86,8 +86,8 @@ const loadCharacters = () => {
     let charList = document.getElementById("CharactersList");
     let charListContent = "";
     for (let i = 0; i < Characters.length; i++) {
-        charListContent += "<div class='CharElement'><div id='char" + i + "'class='CharacterDisp'><a href='display.html'>" + Characters[i].name + " the " +
-        Characters[i].race + ", a level " + Characters[i].level + " " + Characters[i].class + "</a></div></div>"
+        charListContent += "<div class='CharElement'><a href='display.html'><div id='char" + i + "'class='CharacterDisp'>" + Characters[i].name + " the " +
+        Characters[i].race + ", a level " + Characters[i].level + " " + Characters[i].class + "</div></a></div>"
     }
     charList.innerHTML = charListContent;
     for (let i = 0; i < Characters.length; i++) {
